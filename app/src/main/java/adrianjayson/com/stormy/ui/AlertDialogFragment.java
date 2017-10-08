@@ -1,10 +1,12 @@
-package adrianjayson.com.stormy;
+package adrianjayson.com.stormy.ui;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
 import android.content.Context;
 import android.os.Bundle;
+
+import adrianjayson.com.stormy.R;
 
 /**
  * Created by adrian on 01/10/2017.

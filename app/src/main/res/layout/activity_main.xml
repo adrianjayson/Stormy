@@ -4,12 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#fffc970b"
+    android:background="@drawable/bg_gradient"
     android:paddingLeft="32dp"
     android:paddingRight="32dp"
     android:paddingTop="16dp"
-    android:paddingBottom="16dp"
-    tools:context="adrianjayson.com.stormy.MainActivity">
+    android:paddingBottom="3dp"
+    tools:context="adrianjayson.com.stormy.ui.MainActivity">
 
     <TextView
         android:id="@+id/temperatureLabel"
@@ -152,5 +152,34 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_alignBottom="@+id/refreshImageView"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="71dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/hourlyButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#40ffffff"
+            android:text="HOURLY"
+            android:textColor="#ffffffff"/>
+
+        <Button
+            android:id="@+id/dailyButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#40ffffff"
+            android:text="7 DAY"
+            android:textColor="#ffffffff"
+            android:layout_marginLeft="2dp"/>
+    </LinearLayout>
 
 </RelativeLayout>
