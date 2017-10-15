@@ -10,6 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -51,6 +52,8 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R2.id.iconImageView) ImageView mIconImageView;
     @BindView(R2.id.refreshImageView) ImageView mImageRefreshImageView;
     @BindView(R2.id.progressBar) ProgressBar mProgressBar;
+    @BindView(R2.id.dailyButton) Button mDailyButton;
+    @BindView(R2.id.hourlyButton) Button mHourlyButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -145,11 +148,19 @@ public class MainActivity extends AppCompatActivity {
 
     private void toggleRefresh() {
         if (mProgressBar.getVisibility() == View.INVISIBLE) {
+            // refreshing in progress
             mProgressBar.setVisibility(View.VISIBLE);
             mImageRefreshImageView.setVisibility(View.INVISIBLE);
+
+            mDailyButton.setClickable(false);
+            mHourlyButton.setClickable(false);
         } else {
+            // refreshing finished
             mProgressBar.setVisibility(View.INVISIBLE);
             mImageRefreshImageView.setVisibility(View.VISIBLE);
+
+            mDailyButton.setClickable(true);
+            mHourlyButton.setClickable(true);
         }
     }
 
